@@ -36,6 +36,9 @@ public class AutoFormBean implements Serializable{
     
     public void agregarAuto(){
         auto = new Auto(getPatente(),getMarca(),getModelo(),getColor(),getCombustible());
+        //aquí solo se setea auto con los valores ingresados, pero nunca llama a
+        //agregarAutos en ColeccionAutos, con lo que falta la línea siguiente
+        autos.agregarAutos(auto);
     }
     public void establecerAuto(Auto unAuto){
         setAuto(unAuto);
