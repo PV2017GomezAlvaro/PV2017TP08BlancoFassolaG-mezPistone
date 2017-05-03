@@ -25,9 +25,12 @@
                                      update="tblNumeros msgMensaje"/>
                     <p:outputLabel id="datos" value="#{numeroFormBean.numeros.texto}"/>
                 </h:panelGrid>
-                <p:outputLabel id="promedio" value="Promedio: " />
-                <p:outputLabel id="mayor" value="Mayor: " />
-                <p:outputLabel id="menor" value="Menor: " />
+                
+                <p:outputLabel id="promedio" value="Promedio: #{numeroFormBean.prom}" />
+                <p:outputLabel id="mayor" value="Mayor: #{numeroFormBean.mayor}" />
+                <p:outputLabel id="menor" value="Menor: #{numeroFormBean.menor}" />
+                <p:commandButton id="btnCalcular" value="Calcular" update="promedio mayor menor"
+                                 action="#{numeroFormBean.mmp()}"/>
             </h:form>
         </p:panel>
     </h:body>

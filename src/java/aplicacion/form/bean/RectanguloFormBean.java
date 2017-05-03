@@ -9,14 +9,14 @@ import aplicacion.datos.ConjuntoRectangulo;
 import aplicacion.modelo.dominio.Rectangulo;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 
 /**
  *
  * @author Alumno
  */
 @ManagedBean
-@SessionScoped
+@ViewScoped
 public class RectanguloFormBean implements Serializable {
     private ConjuntoRectangulo rectangulos;
     private Rectangulo rect;
