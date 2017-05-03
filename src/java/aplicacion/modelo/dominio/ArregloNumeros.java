@@ -36,6 +36,38 @@ public class ArregloNumeros implements Serializable {
         setTexto(Arrays.toString(getNumeros()));
     }
 
+    public double calcularPromedio(int[] numeros){
+        double promedio=0;
+        for(int i=0;i<numeros.length;i++){
+            promedio=promedio+numeros[i];
+        }
+        promedio=promedio/numeros.length;
+        return promedio;
+    }
+    
+    
+    public int numMayor (int [] numeros){
+        int mayor = numeros[0];
+        for (int i=1;i<numeros.length;i++){
+            if (numeros[i]>mayor){
+                mayor = numeros[i];
+                
+            }
+        }
+        return mayor;
+    }
+    
+     public int numMenor (int [] numeros){
+        int menor = numeros[0];
+        for (int i=1;i<numeros.length;i++){
+            if (numeros[i]<menor){
+                menor = numeros[i];
+                
+            }
+        }
+        return menor;
+    }
+    
     /**
      * @return the numeros
      */
@@ -77,6 +109,8 @@ public class ArregloNumeros implements Serializable {
     public void setCarga(int carga) {
         this.carga = carga;
     }
+
+    
     
     
     

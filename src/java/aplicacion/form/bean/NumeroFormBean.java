@@ -25,8 +25,9 @@ public class NumeroFormBean implements Serializable{
      */
     public NumeroFormBean() {
         numeros = new ArregloNumeros();
+       
     }
-    
+   
     public void agregarNumero(){
         getNumeros().agregarNumero(getNumer());
     }
